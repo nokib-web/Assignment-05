@@ -1,6 +1,6 @@
-// console.log("Hey ami kaj kortesi")
 
-// Increasing heart icon funtion
+
+// Increasing heart icon function
 
 const heartIcons = document.querySelectorAll(".heart-icon")
 const heartCount = document.getElementById("heart-count")
