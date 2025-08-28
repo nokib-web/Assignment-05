@@ -56,7 +56,7 @@ for (const callButton of callButtons) {
         const cards = callButton.closest(".cards");
         const serviceName = cards.querySelector('.service-name').innerText;
         const serviceNumber = cards.querySelector('.service-number').innerText;
-        
+
 
         if (coins < callCost) {
             alert('You don not have enough coins to make this call!');
@@ -65,33 +65,33 @@ for (const callButton of callButtons) {
 
         coins -= callCost;
         coinBalance.innerText = coins
-        alert("Calling to : " + serviceName + ": " + serviceNumber)
+        alert("Calling to " + serviceName + ": " + serviceNumber)
 
 
-        //  saving history function
-
-       
+        //  saving call history function
 
 
-        
+
+
+
         const now = new Date();
         const timeString = now.toLocaleTimeString();
         const div = document.createElement('div');
         div.style.display = 'flex'
         div.style.justifyContent = 'space-between'
-        div.style.alignItems= 'center'
+        div.style.alignItems = 'center'
         div.style.borderRadius = '20px';
         div.style.boxShadow = '20px';
-        div.style.padding ='20px'
-        div.style.backgroundColor= "#f5fff6"
-        div.style.margin ="20px"
+        div.style.padding = '20px'
+        div.style.backgroundColor = "#f5fff6"
+        div.style.margin = "20px"
 
         const leftDiv = document.createElement('div')
         const nameSpan = document.createElement('div')
         nameSpan.innerText = serviceName
         nameSpan.style.fontSize = '20px'
         nameSpan.style.fontWeight = 'bold'
-        
+
 
         const numberSpan = document.createElement('div')
         numberSpan.innerText = serviceNumber
@@ -101,7 +101,7 @@ for (const callButton of callButtons) {
 
         const rightDiv = document.createElement('div')
         rightDiv.innerText = timeString
-        rightDiv.style.fontWeight="bold"
+        rightDiv.style.fontWeight = "bold"
 
         div.appendChild(leftDiv);
         div.appendChild(rightDiv);
@@ -115,6 +115,6 @@ for (const callButton of callButtons) {
 
 // clear history functionality
 
-clearButton.addEventListener("click", function(){
-    callHistory.innerHTML= "";
+clearButton.addEventListener("click", function () {
+    callHistory.innerHTML = "";
 })
